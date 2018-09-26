@@ -23,6 +23,7 @@
     "gulp-bower": "0.0.13",
     "gulp-eslint": "^3.0.1",
     "gulp-jsoncombine": "^1.0.3",
+    "gulp-mustache": "^4.0.0",
     "gulp-rename": "^1.2.0",
     "gulp-spawn-mocha": "^3.1.0",
     "gulp-uglify": "^2.0.0",
@@ -34,6 +35,7 @@
     "karma-tap-reporter": "0.0.6",
     "mocha": "^3.2.0",
     "msgpack5": "^3.3.0",
+    "mustache": "^3.0.0",
     "pako": "^1.0.4"
   }
 }

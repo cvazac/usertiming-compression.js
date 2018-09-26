@@ -14,6 +14,7 @@
     var path = require("path");
     var jsoncombine = require("gulp-jsoncombine");
     var bower = require("gulp-bower");
+    var mustache = require("gulp-mustache");
 
     //
     // Task Definitions
@@ -38,6 +39,22 @@
             }))
             .pipe(uglify({ mangle: true }))
             .pipe(gulp.dest("dist"));
+    });
+
+    gulp.task("build", function() {
+        gulp.src("./src/templates/usertiming-compression.js")
+            .pipe(mustache({
+                "module": fs.readFileSync("./src/templates/detect.js", "utf8")
+            }))
+            .pipe(rename("usertiming-compression.js"))
+            .pipe(gulp.dest("./src"));
+
+        gulp.src("./src/templates/usertiming-compression.js")
+            .pipe(mustache({
+                "module": fs.readFileSync("./src/templates/vanilla.js", "utf8")
+            }))
+            .pipe(rename("usertiming-compression.vanilla.js"))
+            .pipe(gulp.dest("./src"));
     });
 
     gulp.task("build-test", function() {
