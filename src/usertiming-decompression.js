@@ -507,25 +507,7 @@
         }());
     };
 
-    //
-    // Export to the appropriate location
-    //
-    if (typeof define === "function" && define.amd) {
-        //
-        // AMD / RequireJS
-        //
-        define([], function() {
-            return UserTimingDecompression;
-        });
-    } else if (typeof module !== "undefined" && module.exports) {
-        //
-        // Node.js
-        //
-        module.exports = UserTimingDecompression;
-    } else if (typeof root !== "undefined") {
-        //
-        // Browser Global
-        //
-        root.UserTimingDecompression = UserTimingDecompression;
-    }
+    /* eslint-disable no-lone-blocks,space-before-blocks,no-unused-expressions,semi,indent*/
+{{{module}}}
+    /* enable-enable no-lone-blocks,space-before-blocks,no-unused-expressions,semi,indent*/
 }(typeof window !== "undefined" ? window : undefined));

@@ -3,6 +3,6 @@ if (typeof root !== "undefined") {
     //
     // Browser Global
     //
-    root.UserTimingCompression = UserTimingCompression; // eslint-disable-line no-undef
+    root.{{name}} = {{name}}; // eslint-disable-line no-undef
 }
 /* eslint-enable indent */

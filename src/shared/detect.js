@@ -7,17 +7,17 @@ if (typeof define === "function" && define.amd) {
   // AMD / RequireJS
   //
   define([], function() { // eslint-disable-line strict
-    return UserTimingCompression; // eslint-disable-line no-undef
+    return {{name}}; // eslint-disable-line no-undef
   });
 } else if (typeof module !== "undefined" && module.exports) {
   //
   // Node.js
   //
-  module.exports = UserTimingCompression; // eslint-disable-line no-undef
+  module.exports = {{name}}; // eslint-disable-line no-undef
 } else if (typeof root !== "undefined") {
   //
   // Browser Global
   //
-  root.UserTimingCompression = UserTimingCompression; // eslint-disable-line no-undef
+  root.{{name}} = {{name}}; // eslint-disable-line no-undef
 }
 /* eslint-enable indent */
